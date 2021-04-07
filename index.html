@@ -24,7 +24,7 @@
             </div>
 
             <div class="images">
-                <img class="first active" :src="images[num]" alt="">
+                <img class="active" :src="images[index]" alt="">
  
             </div>
             
@@ -33,17 +33,13 @@
             </div>
 
             <div class="nav">
-                <i class="fas fa-circle first active"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle last"></i>
+                <i class="fas fa-circle" :class="dots[0]"></i>
+                <i class="fas fa-circle" :class="dots[1]"></i>
+                <i class="fas fa-circle" :class="dots[2]"></i>
+                <i class="fas fa-circle" :class="dots[3]"></i>
             </div>
 
         </div>
     </div>
 </body>
 </html>
-
-<!-- <img src="https://static.photocdn.pt/images/articles/2017/04/28/iStock-646511634.jpg" alt="">
-<img src="https://cdn.mos.cms.futurecdn.net/FUE7XiFApEqWZQ85wYcAfM.jpg" alt="">
-<img class="last" src="https://static.photocdn.pt/images/articles/2017/04/28/iStock-546424192.jpg" alt=""> -->

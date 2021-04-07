@@ -12,26 +12,52 @@ function initVue(){
                 'https://static.photocdn.pt/images/articles/2017/04/28/iStock-546424192.jpg'
             ],
 
-            'num': 0
+            dots: [
+                'active',
+                'none',
+                'none',
+                'none',
+            ],
+
+            'index': 0,
         },
 
         methods: {
 
             prevImg: function(){
-                console.log('prev', this.num);
-                this.num -= 1;
 
-                if (this.num == -1){
-                    this.num = 3
+                this.index -= 1;
+
+                if (this.index == -1){
+                    this.index = 3
+                }
+                
+                this.dots[this.index] = 'active';
+                this.dots[this.index + 1] = 'none';
+
+                if (this.index == 3){
+
+                    this.dots[0] = 'none'
                 }
             },
 
             nextImg: function(){
-                this.num += 1;
 
-                if (this.num == 4){
-                    this.num = 0
+                this.index += 1;
+
+                if (this.index == 4){
+                    
+                    this.index = 0;
+                };
+
+                this.dots[this.index] = 'active';
+                this.dots[this.index - 1] = 'none';
+
+                if (this.index == 0){
+
+                    this.dots[3] = 'none'
                 }
+
             }
         }
     })
@@ -43,9 +69,3 @@ function init (){
 };
 
 $(init)
-
-// 'img01': 'https://images.pexels.com/photos/371633/pexels-photo-371633.jpeg?cs=srgb&dl=clouds-country-daylight-371633.jpg&fm=jpg',
-// 'img02': 'https://static.photocdn.pt/images/articles/2017/04/28/iStock-646511634.jpg',
-// 'img03': 'https://cdn.mos.cms.futurecdn.net/FUE7XiFApEqWZQ85wYcAfM.jpg',
-// 'img04': 'https://static.photocdn.pt/images/articles/2017/04/28/iStock-546424192.jpg',
-// 'num': '01'

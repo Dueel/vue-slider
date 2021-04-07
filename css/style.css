@@ -31,6 +31,7 @@ body{
 .slider-wrapper .images img {
     display: none;
     height: 100%;
+    max-width: 100%;
 }
 
 .slider-wrapper .images img.active {
